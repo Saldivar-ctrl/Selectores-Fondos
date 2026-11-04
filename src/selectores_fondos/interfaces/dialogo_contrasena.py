@@ -10,7 +10,7 @@ Apariencia: se cambia en ESTILO (más abajo).
 from __future__ import annotations
 
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QDialog, QLineEdit, QVBoxLayout
+from PySide6.QtWidgets import QDialog, QLabel, QLineEdit, QVBoxLayout
 
 ESTILO = """
 QLineEdit {
@@ -44,11 +44,24 @@ class DialogoContrasena(QDialog):
         self.campo = QLineEdit(self)
         self.campo.setEchoMode(QLineEdit.Password)  # puntos
         self.campo.setAlignment(Qt.AlignCenter)
+        self.campo.setFixedSize(360, 52)  # el rectángulo ocupa todo el cuadro
         self.campo.setStyleSheet(ESTILO)
 
-        # Solo se usa al crear/cambiar la contraseña (para distinguir pasos)
-        if marcador:
-            self.campo.setPlaceholderText(marcador)
+
+        # Texto de ayuda propio (el de Qt no se ve con el campo enfocado):
+        # se muestra mientras el campo está vacío y desaparece al escribir
+        self.ayuda = QLabel(marcador, self.campo)
+        self.ayuda.setAlignment(Qt.AlignCenter)
+        self.ayuda.setGeometry(0, 0, 360, 52)
+        self.ayuda.setAttribute(Qt.WA_TransparentForMouseEvents)
+        self.ayuda.setStyleSheet(
+            "background: transparent; border: none; font-size: 18px;"
+            "color: rgba(255, 255, 255, 140);"
+        )
+        self.ayuda.setVisible(bool(marcador))
+        self.campo.textChanged.connect(
+            lambda texto: self.ayuda.setVisible(bool(marcador) and not texto)
+        )
 
         disposicion = QVBoxLayout(self)
         disposicion.setContentsMargins(0, 0, 0, 0)

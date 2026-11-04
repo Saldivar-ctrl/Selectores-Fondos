@@ -136,12 +136,12 @@ def crear_contrasena(parent, config=None):
     if config is None:
         config = parent.gestor.config
 
-    primera = pedir_contrasena(parent, "Nueva contraseña")
+    primera = pedir_contrasena(parent, "Contraseña nueva")
 
     if primera is None:
         return None
 
-    segunda = pedir_contrasena(parent, "Repite la contraseña")
+    segunda = pedir_contrasena(parent, "Repita la contraseña")
 
     if segunda is None:
         return None
