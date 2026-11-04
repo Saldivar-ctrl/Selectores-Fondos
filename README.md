@@ -6,7 +6,13 @@ Dos selectores gráficos de fondos de pantalla animados para **Linux** (waywalle
 |---|---|
 | Carrusel 3D de tarjetas rectangulares (16:9). | Panal de hexágonos dentro de un marco fijo e invisible; solo se mueven los hexágonos. |
 
-> **Capturas:** guarda tus capturas en `assets/images/` y enlázalas aquí, por ejemplo `![Circular](assets/images/circular.png)`.
+## Capturas
+
+| Selector circular | Selector hexagonal |
+|---|---|
+| ![Selector circular](assets/images/circular.png) | ![Selector hexagonal](assets/images/hexagonal.png) |
+
+> Las ilustraciones que se ven en las capturas pertenecen a sus autores y se muestran solo como ejemplo de la interfaz.
 
 ## Características
 
