@@ -1,0 +1,6 @@
+# Dependencias de Python (instala con: python -m pip install -r requirements.txt)
+# Interfaz gráfica de los dos selectores
+PySide6>=6.5
+# Solo en Linux: comunicación con waywallen (catálogo por WebSocket)
+websockets>=12; sys_platform == "linux"
+# Opcional (no es de Python): ffmpeg, para miniaturas de vídeos

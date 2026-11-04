@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+*.spec
+
+# Configuración y datos personales (nunca se suben)
+config.json
+.sello
+mi_configuracion*.json
+privados/
+.fondos_privados/
+*.local.json
+
+# Vídeos e imágenes de fondos personales
+*.mp4
+*.mkv
+*.webm
+*.avi
+*.mov
+fondos/
+fondos_privados/
+
+# Copias de seguridad de los originales (contienen datos personales)
+originales_respaldo/
+
+# Cachés y temporales
+.cache/
+*.tmp
+.pytest_cache/
+.coverage
+
+# Editores y sistema
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
