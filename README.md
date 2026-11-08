@@ -8,9 +8,19 @@ Dos selectores gráficos de fondos de pantalla animados para **Linux** (waywalle
 
 ## Capturas
 
-| Selector circular | Selector hexagonal |
+| Circular | Hexagonal |
 |---|---|
-| ![Selector circular](assets/images/circular.png) | ![Selector hexagonal](assets/images/hexagonal.png) |
+| ![Circular](assets/images/circular.png) | ![Hexagonal](assets/images/hexagonal.png) |
+
+| Cuadrado | Tiras |
+|---|---|
+| ![Cuadrado](assets/images/cuadrado.png) | ![Tiras](assets/images/tiras.png) |
+
+| Paralelogramo |
+|---|
+| ![Paralelogramo](assets/images/paralelogramo.png) |
+
+Los estilos cuadrado, tiras y paralelogramo, y la barra superior con favoritos y ocultar, están en [`selectores_personales/`](selectores_personales/LEEME.md) (archivos independientes).
 
 > Las ilustraciones que se ven en las capturas pertenecen a sus autores y se muestran solo como ejemplo de la interfaz.
 
