@@ -1,6 +1,8 @@
 # Selectores de Fondos Animados
 
-Dos selectores gráficos de fondos de pantalla animados para **Linux** (waywallen) y **Windows 10/11** (Wallpaper Engine o Lively Wallpaper), hechos con Python y PySide6:
+Selectores gráficos de fondos de pantalla animados para **Linux** (waywallen) y **Windows 10/11** (Wallpaper Engine o Lively Wallpaper), hechos con Python y PySide6. Hay **cinco estilos**: circular y hexagonal en el proyecto principal (`src/`), y cuadrado, tiras y paralelogramo en [`selectores_personales/`](selectores_personales/LEEME.md), todos con barra superior, favoritos y ocultar desde el selector.
+
+Estilos del proyecto principal:
 
 | Selector circular | Selector hexagonal |
 |---|---|
@@ -26,7 +28,7 @@ Los estilos cuadrado, tiras y paralelogramo, y la barra superior con favoritos y
 
 ## Características
 
-- Los dos diseños originales, conservados; comparten el mismo núcleo (no hay código duplicado).
+- Los dos diseños originales (circular y hexagonal), conservados; comparten el mismo núcleo (no hay código duplicado). Más tres estilos en `selectores_personales/`.
 - Fondos desde carpetas propias (vídeo `.mp4 .mkv .webm .avi .mov` e imagen `.jpg .jpeg .png .webp`) y desde **Wallpaper Engine** (carpetas de Steam y Workshop).
 - Sistemas de aplicación, uno por plataforma, sin mezclarse:
   - Linux → **waywallen**
@@ -36,6 +38,22 @@ Los estilos cuadrado, tiras y paralelogramo, y la barra superior con favoritos y
 - Configuración desde la propia interfaz (`F2`): rutas, sistema de fondos, contraseña. Nada de editar código.
 - Volver al fondo anterior (`Ctrl+R` o `--restaurar`).
 - Diagnóstico de dependencias (`--verificar`) con mensajes claros.
+
+## Nuevo: barra superior, favoritos y ocultar desde el selector
+
+Disponible en los cinco archivos de [`selectores_personales/`](selectores_personales/LEEME.md) (archivos independientes, un solo `.py` cada uno; aún no está en `src/main.py`):
+
+- **Estilos:** circular (desliza suave, con más espacio entre tarjetas y rueda del mouse), hexagonal, **cuadrado** (cuadrícula que se desliza de lado), **tiras** inclinadas y **paralelogramo**.
+- **Barra superior** que baja deslizando al acercar el mouse al borde de arriba (o con `B`) y se esconde sola:
+  - **Todos / ★ Favoritos**.
+  - **Filtros por tipo** (botón *Filtros*): Imagen, Escena, Vídeo y Web, con casillas.
+  - **Filtro por color:** tira de barras diagonales de color (rojo, naranja, amarillo, verde, azul, morado, rosa, gris); el color se calcula solo de cada miniatura.
+  - **Búsqueda por nombre** (`Ctrl+F`) y contador "n / total".
+- **Favoritos** desde el propio selector: `F` marca o quita la ★ (blanca, en la esquina de la tarjeta). Sin editar archivos ni código.
+- **Ocultar un fondo** desde el selector: `Supr` lo oculta; no vuelve a aparecer hasta `Ctrl+Shift+H` con la contraseña. `Ctrl+Z` deshace el último que ocultaste.
+- Favoritos y ocultos se guardan en `~/.config/wallpaper-selector-data.json` (permisos `600`).
+
+> **Privacidad:** la lista de fondos ocultos vive en ese archivo, así que quien lo borre o lo edite podría verlos sin contraseña. La protección real es mover o cifrar los archivos privados.
 
 ## Estado de compatibilidad (sé honesto con lo que está probado)
 
@@ -88,12 +106,22 @@ python src/main.py --restaurar      # vuelve al fondo anterior
 
 | Acción | Tecla / gesto |
 |---|---|
-| Mover | Arrastrar, flechas, `A` / `D`, rueda (hexagonal) |
+| Mover | Arrastrar, flechas, `A` / `D`, rueda (hexagonal y circular) |
 | Aplicar el fondo | Clic o `Enter` |
 | Configuración | `F2` |
 | Modo oculto | `Ctrl+Shift+H` |
 | Fondo anterior | `Ctrl+R` |
 | Cerrar | `Esc` |
+
+Atajos adicionales de los selectores de [`selectores_personales/`](selectores_personales/LEEME.md):
+
+| Acción | Tecla / gesto |
+|---|---|
+| Favorito (★) del fondo señalado | `F` |
+| Ocultar el fondo señalado | `Supr` (`Ctrl+Z` deshace) |
+| Buscar | `Ctrl+F` |
+| Mostrar / esconder la barra superior | `B` (o mouse en el borde de arriba) |
+| Limpiar filtros | `Esc` (si no hay filtros, cierra) |
 
 ## Configuración
 
