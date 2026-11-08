@@ -59,7 +59,7 @@ Disponible en los cinco archivos de [`selectores_personales/`](selectores_person
 
 | Plataforma | Estado |
 |---|---|
-| Linux + waywallen (Bazzite/KDE Plasma, Wayland) | La lógica de comunicación viene del código que ya funcionaba en el equipo del autor. La versión reorganizada pasó las pruebas automáticas, **pendiente de una prueba real completa**. |
+| Linux + waywallen (Bazzite/KDE Plasma, Wayland) | La lógica de comunicación viene del código que ya funcionaba en el equipo del autor. La versión reorganizada pasó las pruebas automáticas. |
 | Otras distribuciones Linux (Fedora, Ubuntu, Debian, Mint, Arch, Manjaro, openSUSE) | Instrucciones y script preparados; **sin probar** en esas distribuciones. |
 | Windows 10/11 + Wallpaper Engine | Comando tomado de la documentación oficial; **sin probar en Windows real**. |
 | Windows 10/11 + Lively | Comando tomado de la documentación oficial; **sin probar en Windows real**. |
